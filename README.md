@@ -3,17 +3,17 @@
 ## Перед запуском
 ### Если у вас npm то:
 
-### npm i
+### `npm i`
 
-### npm start
+### `npm start`
 
 
 ### или(либо)
 
 ### Если у вас yarn то:
 
-### yarn
+### `yarn`
 
-### yarn start
+### `yarn start`
 
 Проверка работы на в браузере на адресе http://localhost:5000/
