@@ -7,29 +7,29 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Document</title>
 </head>
-<body>
+<body style="background-color: rgb(190, 181, 181)">
   <div class="container">
-    <h1>URL Shrinker</h1>
+    <h1>URL shortener by @magoshi</h1>
     <form action="/shortUrls" method="POST" class="my-4 form-inline">
-      <label for="fullUrl" class="sr-only">Url</label>
-      <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
-      <button class="btn btn-success" type="submit">Shrink</button>
+      <label for="fullUrl" class="sr-only">URL-адрес</label>
+      <input required placeholder="URL-адрес" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+      <button class="btn btn-success" type="submit">Сократить</button>
     </form>
     
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
-          <th>Full URL</th>
-          <th>Short URL</th>
-          <th>Clicks</th>
+          <th>Полный URL-адрес</th>
+          <th>Короткий URL-адрес</th>
+          <th>Переходы</th>
         </tr>
       </thead>
       <tbody>
         <% shortUrls.forEach(shortUrl => { %>
           <tr>
             <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
-            <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
-            <td><%= shortUrl.clicks %></td>
+            <td style="text-align: center;"><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+            <td style="text-align: center;"><%= shortUrl.clicks %></td>
           </tr>
         <% }) %>
       </tbody>
